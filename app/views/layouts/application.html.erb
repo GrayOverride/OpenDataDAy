@@ -19,6 +19,7 @@
         	<div class="menu">
         		<ul>
         			<li><p>Chit Chat</p></li>
+        			<li><%= link_to 'Home', root_path %></li>
         			<li><%= link_to 'Start a chitty chat', messages_path %></li>
         		</ul>
         	</div>
@@ -26,12 +27,11 @@
         </div>
 		<div class="header" data-role="header">
 			<span class="open left"><a href="#panel-01">&#x2630;</a></span>
-            <span class="title">Chit Chat</span>
-			<span class="open right"><a href="#panel-02">B</a></span>
+            <span class="title">Chit-Chat</span>
+			<span class="open right"><a href="#panel-02">&#x2605;</a></span>
 		</div>
         <div class="content" data-role="content">
         <!-- body -->
-  		<div id="map-canvas" style='width: 100%; height: 400px;'></div>
 
         <%= yield %>
 
