@@ -34,12 +34,24 @@ function initialize() {
         position: pos,
         //content: text skrivs här
       });
-      var chitIcon = "app/assets/images/marker.png,";
+      var 
+        var chitpos = new google.maps.LatLng(coordinates.lat, coordinates.long);
+        for (i = 0; i < chitpos.length; i++) { 
+        var chitmarker = new google.maps.Marker({
+          postion: chitpos,
+          map: map,
+          title: "a toilet!",
+        });
+      }
+
+     // var chitIcon = "app/assets/images/marker.png,";
     var marker = new google.maps.Marker({
       position: pos,
       map: map,
-      title:"Hello World!"
-      icon = chitIcon,
+      title:"Hello World!",
+    //  icon = chitIcon,
+
+   
 });
 
       map.setCenter(pos);
