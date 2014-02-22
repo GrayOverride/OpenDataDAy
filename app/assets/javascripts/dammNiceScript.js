@@ -18,7 +18,7 @@ function initialize() {
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
-        content: 'You are here, you monster.'
+        //content: text skrivs här
       });
     var marker = new google.maps.Marker({
       position: pos,
