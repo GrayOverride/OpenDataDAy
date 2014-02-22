@@ -11,6 +11,9 @@
  *= require_self
  *= require_tree .
  */
+
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
 @font-face {
   font-family: 'hk-demo';
   src: url('fonts/hk-demo.eot');
@@ -35,7 +38,7 @@
 	position: relative;
 }
 .demo-wrapper .header .title { 
-	font-size:100%; 
+	font-family: 'Pacifico', cursive;
 }
 .demo-wrapper .header a,
 .demo-wrapper .header a:hover,
@@ -136,4 +139,8 @@
 	content: '\f0e0';
 }
 
+#chat{
+	height:200px;
+	overflow-y:scroll;
+}
 

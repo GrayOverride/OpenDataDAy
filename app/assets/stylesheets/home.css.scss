@@ -2,28 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url(http://fonts.googleapis.com/css?family=Pacifico);
-
-#bg {
-position:relative;
-width:100%;
-z-index:1;
-border-radius:.6em;
-}
-
-#root-btn{margin-top:400px;}
-
-#title{font-family: 'Pacifico', cursive;
-position:absolute;
-font-size:125%;
-color:white;
-margin-left:1px;
-width:93%;
-text-align:center;
-z-index:10;
-margin-top:25px;
-
-}
 
 .bubble-me
 {
