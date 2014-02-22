@@ -35,6 +35,7 @@ end
 #Private pub
 gem "private_pub"
 gem "thin"
+gem 'gmaps4rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

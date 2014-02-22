@@ -1,14 +1,65 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>OpenDataDay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+<script src="//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry" type="text/javascript"></script>
+<script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script
+
 </head>
 <body>
 
-<%= yield %>
 
+<div class="demo-wrapper" data-role="page">
+        <!-- panel left -->
+        <div class="panel left" data-role="panel" data-position="left" data-display="push" id="panel-01">
+
+
+        </div>
+		<div class="header" data-role="header">
+			<span class="open left"><a href="#panel-01">A</a></span>
+            <span class="title">Chit Chat</span>
+			<span class="open right"><a href="#panel-02">B</a></span>
+		</div>
+        <div class="content" data-role="content">
+        <!-- body -->
+        <div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+<script type="text/javascript">
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers([
+    {
+      "lat": 0,
+      "lng": 0,
+      "picture": {
+        "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+        "width":  36,
+        "height": 36
+      },
+      "infowindow": "hello!"
+    }
+  ]);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+});
+</script>
+
+        <%= yield %>
+
+        </div>
+
+
+    	<!-- panel right -->
+    	<div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-02">
+
+        
+    	</div>
+	</div>
 </body>
 </html>

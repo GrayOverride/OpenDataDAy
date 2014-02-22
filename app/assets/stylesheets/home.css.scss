@@ -1,0 +1,58 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bubble-me
+{
+position: relative;
+width: 100%;
+height: auto;
+margin-bottom:25px;
+padding: 5px;
+background: #0daee3;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 5px;
+}
+
+.bubble-me:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 22px 10px 0;
+border-color: #0daee3 transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -22px;
+left: 320px;
+}
+
+
+.bubble-you
+{
+position: relative;
+width: 100%;
+height: auto;
+margin-bottom:25px;
+padding: 5px;
+background: #e3e3e3;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 5px;
+}
+
+.bubble-you:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 22px 10px 0;
+border-color: #e3e3e3 transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -22px;
+left: 20px;
+}
