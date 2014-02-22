@@ -1,14 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>OpenDataDay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="demo-wrapper" data-role="page">
 
-<%= yield %>
+        
+        <!-- panel left -->
+        <div class="panel left" data-role="panel" data-position="left" data-display="push" id="panel-01">
 
+
+        </div>
+		<div class="header" data-role="header">
+			<span class="open left"><a href="#panel-01">A</a></span>
+            <span class="title">Chit Chat</span>
+			<span class="open right"><a href="#panel-02">B</a></span>
+		</div>
+        <div class="content" data-role="content">
+        <!-- body -->
+        <%= yield %>
+
+        </div>
+
+
+    	<!-- panel right -->
+    	<div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-02">
+
+        
+    	</div>
+	</div>
 </body>
 </html>
