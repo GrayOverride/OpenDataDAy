@@ -8,5 +8,6 @@ OpenDataDay::Application.routes.draw do
 
   get "messages" => "messages#index"
   get "messages/create_user" => "messages#create_user"
+  get "messages/get_data" => "messages#get_data"
   resource :message
 end
