@@ -28,11 +28,16 @@
 <div class="demo-wrapper" data-role="page">
         <!-- panel left -->
         <div class="panel left" data-role="panel" data-position="left" data-display="push" id="panel-01">
-        	<div class="menu"></div>
+        	<div class="menu">
+        		<ul>
+        			<li><p>Chit Chat</p></li>
+        			<li><%= link_to 'Start a chitty chat', messages_path %></li>
+        		</ul>
+        	</div>
 
         </div>
 		<div class="header" data-role="header">
-			<span class="open left"><a href="#panel-01">A</a></span>
+			<span class="open left"><a href="#panel-01">&#x2630;</a></span>
             <span class="title">Chit Chat</span>
 			<span class="open right"><a href="#panel-02">B</a></span>
 		</div>
