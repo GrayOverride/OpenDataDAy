@@ -12,6 +12,7 @@ function initialize() {
   // Try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
+      var testpos = new google.maps.LatLng(56.166773, 14.889221);
       var pos = new google.maps.LatLng(position.coords.latitude,
                                        position.coords.longitude);
 
@@ -20,14 +21,17 @@ function initialize() {
         position: pos,
         //content: text skrivs här
       });
+      var chitIcon = "app/assets/images/marker.png,";
     var marker = new google.maps.Marker({
       position: pos,
       map: map,
       title:"Hello World!"
+      icon = chitIcon,
 });
 
       map.setCenter(pos);
-    }, function() {
+    }, 
+    function() {
       handleNoGeolocation(true);
     });
   } else {
@@ -46,6 +50,7 @@ function handleNoGeolocation(errorFlag) {
   var options = {
     map: map,
     position: new google.maps.LatLng(56.166773, 14.889221),
+
     content: content
   };
 
