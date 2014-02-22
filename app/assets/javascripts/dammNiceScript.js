@@ -1,5 +1,18 @@
 $( document ).ready(function() {
-
+  var coordinates;
+  
+  $(function(){
+    $.ajax({
+      type: "GET",  
+      url: "messages/get_data", 
+      cached: false, 
+      async: false
+    })
+    .done(function(data) {
+      coordinates = data;
+      console.log(coordinates);
+    });
+  });
 
 var map;
 function initialize() {
