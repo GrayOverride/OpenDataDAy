@@ -1,6 +1,6 @@
 $( document ).ready(function() {
   var coordinates;
-  
+
   $(function(){
     $.ajax({
       type: "GET",  
@@ -10,7 +10,8 @@ $( document ).ready(function() {
     })
     .done(function(data) {
       coordinates = data;
-      console.log(coordinates);
+      console.log(coordinates[0].lat);
+      
     });
   });
 
@@ -31,13 +32,16 @@ function initialize() {
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
-        //content: text skrivs här
+        content: 'Location found using HTML5.'
       });
-    var marker = new google.maps.Marker({
-      position: pos,
-      map: map,
-      title:"Hello World!"
-});
+
+      $.each(coordinates, function(index, element){
+        var chitpos = new google.maps.LatLng(element.lat, element.long);
+        var marker = new google.maps.Marker({
+          position: chitpos,
+          map: map
+        });
+      });
 
       map.setCenter(pos);
     }, function() {
