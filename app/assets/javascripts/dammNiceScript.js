@@ -1,6 +1,6 @@
 $( document ).ready(function() {
   var coordinates;
-  
+
   $(function(){
     $.ajax({
       type: "GET",  
@@ -10,7 +10,8 @@ $( document ).ready(function() {
     })
     .done(function(data) {
       coordinates = data;
-      console.log(coordinates);
+      console.log(coordinates[0].lat);
+      
     });
   });
 
@@ -29,31 +30,13 @@ function initialize() {
       var pos = new google.maps.LatLng(position.coords.latitude,
                                        position.coords.longitude);
 
-      var infowindow = new google.maps.InfoWindow({
-        map: map,
-        position: pos,
-        //content: text skrivs här
-      });
-      var 
-        var chitpos = new google.maps.LatLng(coordinates.lat, coordinates.long);
-        for (i = 0; i < chitpos.length; i++) { 
-        var chitmarker = new google.maps.Marker({
-          postion: chitpos,
-          map: map,
-          title: "a toilet!",
+      $.each(coordinates, function(index, element){
+        var chitpos = new google.maps.LatLng(element.lat, element.long);
+        var marker = new google.maps.Marker({
+          position: chitpos,
+          map: map
         });
-      }
-
-     // var chitIcon = "app/assets/images/marker.png,";
-    var marker = new google.maps.Marker({
-      position: pos,
-      map: map,
-      title:"Hello World!",
-    //  icon = chitIcon,
-
-   
-});
-
+      });
       map.setCenter(pos);
     }, 
     function() {
