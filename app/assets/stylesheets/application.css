@@ -12,7 +12,7 @@
  *= require_tree .
  */
 
-@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Merienda+One);
 
 @font-face {
   font-family: 'hk-demo';
@@ -38,7 +38,7 @@
 	position: relative;
 }
 .demo-wrapper .header .title { 
-	font-family: 'Pacifico', cursive;
+	font-family: 'Merienda One', cursive;
 }
 .demo-wrapper .header a,
 .demo-wrapper .header a:hover,
@@ -127,7 +127,7 @@
 	content: '\f09e';
 }
 .demo-wrapper .panel.left .profile a:before { 
-	content: '👤';
+	
 }
 .demo-wrapper .panel.left .setting a:before { 
 	content: '\2699';

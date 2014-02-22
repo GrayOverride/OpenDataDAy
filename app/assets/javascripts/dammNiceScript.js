@@ -26,14 +26,9 @@ function initialize() {
   // Try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
+      var testpos = new google.maps.LatLng(56.166773, 14.889221);
       var pos = new google.maps.LatLng(position.coords.latitude,
                                        position.coords.longitude);
-
-      var infowindow = new google.maps.InfoWindow({
-        map: map,
-        position: pos,
-        content: 'Location found using HTML5.'
-      });
 
       $.each(coordinates, function(index, element){
         var chitpos = new google.maps.LatLng(element.lat, element.long);
@@ -42,9 +37,9 @@ function initialize() {
           map: map
         });
       });
-
       map.setCenter(pos);
-    }, function() {
+    }, 
+    function() {
       handleNoGeolocation(true);
     });
   } else {
@@ -63,6 +58,7 @@ function handleNoGeolocation(errorFlag) {
   var options = {
     map: map,
     position: new google.maps.LatLng(56.166773, 14.889221),
+
     content: content
   };
 
