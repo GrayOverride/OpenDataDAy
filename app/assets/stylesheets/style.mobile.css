@@ -621,15 +621,7 @@ a.ui-link-inherit {
     cursor: default!important;
     pointer-events: none;
 }
-.ui-icon, .ui-icon-searchfield:after {
-    background: #666;
-    background: rgba(0, 0, 0, .4);
-    background-image: url(images/icons-18-white.png);
-    background-repeat: no-repeat;
-    -moz-border-radius: 9px;
-    -webkit-border-radius: 9px;
-    border-radius: 9px;
-}
+
 .ui-icon-alt {
     background: #fff;
     background: rgba(255, 255, 255, .3);
@@ -637,7 +629,7 @@ a.ui-link-inherit {
     background-repeat: no-repeat;
 }
 @media only screen and (-webkit-min-device-pixel-ratio:1.3), only screen and (min--moz-device-pixel-ratio:1.3), only screen and (min-resolution:200dpi) {
-    .ui-icon-plus, .ui-icon-minus, .ui-icon-delete, .ui-icon-arrow-r, .ui-icon-arrow-l, .ui-icon-arrow-u, .ui-icon-arrow-d, .ui-icon-check, .ui-icon-gear, .ui-icon-refresh, .ui-icon-forward, .ui-icon-back, .ui-icon-grid, .ui-icon-star, .ui-icon-alert, .ui-icon-info, .ui-icon-home, .ui-icon-bars, .ui-icon-edit, .ui-icon-search, .ui-icon-searchfield: after, .ui-icon-checkbox-off, .ui-icon-checkbox-on, .ui-icon-radio-off, .ui-icon-radio-on {
+    .ui-icon-plus, .ui-icon-minus, .ui-icon-delete, .ui-icon-arrow-r, .ui-icon-arrow-l, .ui-icon-arrow-u, .ui-icon-arrow-d, .ui-icon-check, .ui-icon-gear, .ui-icon-refresh, .ui-icon-forward, .ui-icon-back, .ui-icon-grid, .ui-icon-star, .ui-icon-alert, .ui-icon-info, .ui-icon-home, .ui-icon-bars, .ui-icon-edit, .ui-icon-search, .ui-icon-checkbox-off, .ui-icon-checkbox-on, .ui-icon-radio-off, .ui-icon-radio-on {
     background-image: url(images/icons-36-white.png);
     -moz-background-size: 842px 18px;
     -o-background-size: 842px 18px;
@@ -3016,16 +3008,7 @@ textarea.ui-input-text {
 textarea.ui-mini {
     height: 45px;
 }
-.ui-icon-searchfield:after {
-    position: absolute;
-    left: 7px;
-    top: 50%;
-    margin-top: -9px;
-    content: "";
-    width: 18px;
-    height: 18px;
-    opacity: .5;
-}
+
 .ui-input-search .ui-input-clear, .ui-input-text .ui-input-clear {
     position: absolute;
     right: 0;
