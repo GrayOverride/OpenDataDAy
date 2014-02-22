@@ -32,6 +32,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+#Private pub
+gem "private_pub"
+gem "thin"
 gem 'gmaps4rails'
 
 # Use ActiveModel has_secure_password

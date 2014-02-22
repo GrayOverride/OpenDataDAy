@@ -1,0 +1,10 @@
+<div id="chat">
+
+</div>
+
+<%= form_tag("", :class => "form-inline") do %>
+	<%= text_field_tag :message, nil, :placeholder => "Write a message", :autocomplete => "off" %>
+	<%= submit_tag("Send", :id => "chat-send") %>
+<% end %>
+
+<%= subscribe_to "/messages/new" %>
