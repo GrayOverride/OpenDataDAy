@@ -11,6 +11,9 @@
  *= require_self
  *= require_tree .
  */
+
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
 @font-face {
   font-family: 'hk-demo';
   src: url('fonts/hk-demo.eot');
@@ -35,7 +38,7 @@
 	position: relative;
 }
 .demo-wrapper .header .title { 
-	font-size:100%; 
+	font-family: 'Pacifico', cursive;
 }
 .demo-wrapper .header a,
 .demo-wrapper .header a:hover,
@@ -66,7 +69,7 @@
 	cursor: pointer;
 }
 .demo-wrapper .panel {
-	background: #7F8C8D;
+	background: gray;
 	color: #ECF0F1;
 }
 .demo-wrapper .panel a {
@@ -96,7 +99,7 @@
 	padding: 0;
 }
 .demo-wrapper .panel a:hover {
-	background-color: #95A5A6;
+	background-color: #0daee3;
 }
 .demo-wrapper .panel.right a:before {
 	content: '';
@@ -136,4 +139,8 @@
 	content: '\f0e0';
 }
 
+#chat{
+	height:200px;
+	overflow-y:scroll;
+}
 
