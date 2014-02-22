@@ -7,6 +7,7 @@ class MessagesController < ApplicationController
   	message = Hash.new
     message["content"] = params[:content]
     PrivatePub.publish_to "/messages/new", :message => message
+    render :nothing => true
   end
 
   private
