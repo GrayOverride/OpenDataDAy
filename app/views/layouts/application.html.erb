@@ -28,7 +28,7 @@
 <div class="demo-wrapper" data-role="page">
         <!-- panel left -->
         <div class="panel left" data-role="panel" data-position="left" data-display="push" id="panel-01">
-
+        	<div class="menu"></div>
 
         </div>
 		<div class="header" data-role="header">
@@ -38,15 +38,11 @@
 		</div>
         <div class="content" data-role="content">
         <!-- body -->
-        <div style='width: 800px;'>
-  <div id="map-canvas" style='width: 800px; height: 400px;'></div>
-</div>
-
+  		<div id="map-canvas" style='width: 100%; height: 400px;'></div>
 
         <%= yield %>
 
         </div>
-
 
     	<!-- panel right -->
     	<div class="panel right" data-role="panel" data-position="right" data-display="overlay" id="panel-02">
