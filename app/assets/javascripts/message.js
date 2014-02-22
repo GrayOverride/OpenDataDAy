@@ -1,11 +1,21 @@
 PrivatePub.subscribe("/messages/new", function(data, channel) {
-  $("#chat").append("<p>" + data.message.content + "</p>");
+	//$("#chat").append('<div class="bubble-me">' + data.message.content + '</p>');
+	//$("#chat").append('<div class="bubble-you">' + data.message.content + '</p>');
+	$("#chat").append('<div class="bubble-you">' + data.message.content + '</div>');
+	$('#chat').change();
+	$('#chat').animate({ scrollTop: $('#chat').prop("scrollHeight") - $('#chat').height() }, 1000);
 });
 
 $(document).ready(function() {
 	$(function(){
-	  $("#chat-send").click(function(){  
-	    var dataString = 'content=' + $("input#message").val();
+		$("#chat-send").click(function(){  
+			post_message();
+			return false;
+		});  
+	});
+
+	post_message = function(){
+		var dataString = 'content=' + $("input#message").val();
 	    $("input#message").val("");
 
 	    $.ajax({  
@@ -13,9 +23,6 @@ $(document).ready(function() {
 		  url: "message",  
 		  data: dataString,
 		  async: false
-		});
-
-		return false; 
-	  });  
-	});
+		}); 
+	}
 });
